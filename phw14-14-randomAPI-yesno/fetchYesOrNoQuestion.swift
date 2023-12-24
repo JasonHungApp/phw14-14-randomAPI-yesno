@@ -10,12 +10,12 @@ import Foundation
 /*
  https://raw.githubusercontent.com/JasonHungApp/JSON_API/main/YesOrNoQuestion
  [
- 我的運勢好嘛？,
- 最近愛情運好嗎？,
- 今天財運如何？,
- 尾牙會中大獎嗎？,
- 今天要買股票嗎？,
- 考試會順利嗎？
+ "我的運勢好嘛？",
+ "最近愛情運好嗎？",
+ "今天財運如何？",
+ "尾牙會中大獎嗎？",
+ "今天要買股票嗎？",
+ "考試會順利嗎？"
  ]
 
  */
@@ -29,7 +29,7 @@ struct Question: Codable {
 let yesOrNoQuestionURL = URL(string: "https://raw.githubusercontent.com/JasonHungApp/JSON_API/main/YesOrNoQuestion")! // Replace with the actual URL or local file URL
 
 
-func fetchYesOrNoQuestion(completion: @escaping ([Question]) -> Void) {
+func fetchYesOrNoQuestion(completion: @escaping ([String]) -> Void) {
     let jsonURL = yesOrNoQuestionURL // 替換為實際的 JSON URL
 
     fetchData(from: jsonURL) { data in
@@ -40,8 +40,12 @@ func fetchYesOrNoQuestion(completion: @escaping ([Question]) -> Void) {
         }
 
         do {
+            // 將 data 轉換為字符串印出
+            if let dataString = String(data: data, encoding: .utf8) {
+                print("接收到的數據：", dataString)
+            }
             
-            var decodedData = try JSONDecoder().decode([Question].self, from: data)
+            let decodedData = try JSONDecoder().decode([String].self, from: data)
             completion(decodedData) // 調用 completion handler 傳遞結果
             
         } catch {

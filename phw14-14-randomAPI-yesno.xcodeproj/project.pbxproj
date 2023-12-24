@@ -13,6 +13,10 @@
 		F3ED035A2B35EB6800BBEBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3ED03582B35EB6800BBEBCB /* Main.storyboard */; };
 		F3ED035C2B35EB6900BBEBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ED035B2B35EB6900BBEBCB /* Assets.xcassets */; };
 		F3ED035F2B35EB6900BBEBCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3ED035D2B35EB6900BBEBCB /* LaunchScreen.storyboard */; };
+		F3ED03672B35EDAC00BBEBCB /* fetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED03662B35EDAC00BBEBCB /* fetchData.swift */; };
+		F3ED03692B35EDD100BBEBCB /* fetchYesOrNoQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED03682B35EDD100BBEBCB /* fetchYesOrNoQuestion.swift */; };
+		F3ED036B2B35FEF900BBEBCB /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ED036A2B35FEF900BBEBCB /* resultViewController.swift */; };
+		F3ED036E2B3609D500BBEBCB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F3ED036D2B3609D500BBEBCB /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		F3ED035B2B35EB6900BBEBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3ED035E2B35EB6900BBEBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3ED03602B35EB6900BBEBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3ED03662B35EDAC00BBEBCB /* fetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fetchData.swift; sourceTree = "<group>"; };
+		F3ED03682B35EDD100BBEBCB /* fetchYesOrNoQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fetchYesOrNoQuestion.swift; sourceTree = "<group>"; };
+		F3ED036A2B35FEF900BBEBCB /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3ED036E2B3609D500BBEBCB /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +67,13 @@
 				F3ED03522B35EB6800BBEBCB /* AppDelegate.swift */,
 				F3ED03542B35EB6800BBEBCB /* SceneDelegate.swift */,
 				F3ED03562B35EB6800BBEBCB /* ViewController.swift */,
+				F3ED036A2B35FEF900BBEBCB /* resultViewController.swift */,
 				F3ED03582B35EB6800BBEBCB /* Main.storyboard */,
 				F3ED035B2B35EB6900BBEBCB /* Assets.xcassets */,
 				F3ED035D2B35EB6900BBEBCB /* LaunchScreen.storyboard */,
 				F3ED03602B35EB6900BBEBCB /* Info.plist */,
+				F3ED03662B35EDAC00BBEBCB /* fetchData.swift */,
+				F3ED03682B35EDD100BBEBCB /* fetchYesOrNoQuestion.swift */,
 			);
 			path = "phw14-14-randomAPI-yesno";
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = "phw14-14-randomAPI-yesno";
+			packageProductDependencies = (
+				F3ED036D2B3609D500BBEBCB /* Kingfisher */,
+			);
 			productName = "phw14-14-randomAPI-yesno";
 			productReference = F3ED034F2B35EB6800BBEBCB /* phw14-14-randomAPI-yesno.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = F3ED03462B35EB6800BBEBCB;
+			packageReferences = (
+				F3ED036C2B3609D500BBEBCB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = F3ED03502B35EB6800BBEBCB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3ED03692B35EDD100BBEBCB /* fetchYesOrNoQuestion.swift in Sources */,
 				F3ED03572B35EB6800BBEBCB /* ViewController.swift in Sources */,
 				F3ED03532B35EB6800BBEBCB /* AppDelegate.swift in Sources */,
+				F3ED036B2B35FEF900BBEBCB /* resultViewController.swift in Sources */,
+				F3ED03672B35EDAC00BBEBCB /* fetchData.swift in Sources */,
 				F3ED03552B35EB6800BBEBCB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,11 +315,13 @@
 				DEVELOPMENT_TEAM = 3266J6665X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "phw14-14-randomAPI-yesno/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "運勢占卜";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +345,13 @@
 				DEVELOPMENT_TEAM = 3266J6665X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "phw14-14-randomAPI-yesno/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "運勢占卜";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3ED036C2B3609D500BBEBCB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3ED036D2B3609D500BBEBCB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3ED036C2B3609D500BBEBCB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3ED03472B35EB6800BBEBCB /* Project object */;
 }
